@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Vanowarna Aerials - Drone Photography & Videography in Sri Lanka</title>
+    <meta name="description" content="Your Drone Photography Partner in Sri Lanka with over 9+ years of experience. Premier drone photography, videography, and precision mapping services in Sri Lanka.">
+    <meta name="keywords" content="drone Sri Lanka, drone photography Sri Lanka, aerial cinematography Sri Lanka, aerial photography, drone services Colombo, Vanowarna Aerials, FPV drone Sri Lanka, drone mapping Sri Lanka">
+    <meta name="author" content="Vanowarna Aerials">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dronelanka.github.io/">
+    <meta property="og:title" content="Vanowarna Aerials - Drone Photography & Videography in Sri Lanka">
+    <meta property="og:description" content="Your Drone Photography Partner in Sri Lanka with over 9+ years of experience.">
+    <meta property="og:image" content="https://placehold.co/1200x630/e2e8f0/4a5568?text=Vanowarna+Aerials">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dronelanka.github.io/">
+    <meta property="twitter:title" content="Vanowarna Aerials - Drone Photography & Videography in Sri Lanka">
+    <meta property="twitter:description" content="Your Drone Photography Partner in Sri Lanka with over 9+ years of experience.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/e2e8f0/4a5568?text=Vanowarna+Aerials">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://github.com/dronelanka/dronelanka.github.io/blob/main/src/drone%20photography%20sri%20lanka.png?raw=true" type="image/png" alt="Vanowarna Aerials Drone Photography Sri Lanka Favicon">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+        }
+        
+        /* Interactive Gradient Background */
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at var(--x) var(--y), #d1e5f0 0%, #f7fafc 50%, #e2e8f0 100%);
+            transition: background 0.1s ease-out;
+        }
+
+        /* Frosted Glass Panel Effect */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px) saturate(180%);
+            -webkit-backdrop-filter: blur(12px) saturate(180%);
+            border: 1px solid rgba(209, 213, 219, 0.3);
+            border-radius: 1rem; /* 16px */
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            overflow-x: hidden;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        /* Increased size of carousel items */
+        .carousel-item {
+            flex: 0 0 100%;
+        }
+        @media (min-width: 768px) {
+            .carousel-item {
+                flex: 0 0 50%;
+            }
+        }
+        @media (min-width: 1024px) {
+            .carousel-item {
+                flex: 0 0 40%; /* Made items larger */
+            }
+        }
+         @media (min-width: 1280px) {
+            .carousel-item {
+                flex: 0 0 33.333%;
+            }
+        }
+        
+        /* Modal Lightbox for Portfolio */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+            backdrop-filter: blur(8px);
+        }
+        .modal-content {
+            position: relative;
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            max-width: 800px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .modal-img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
+        
+        /* Scroll reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-slate-700 antialiased">
+
+    <!-- Interactive Gradient Background -->
+    <div class="gradient-bg"></div>
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between glass-panel px-6 py-2 shadow-sm">
+                <a href="#" class="text-2xl font-bold text-slate-800">
+                    <!-- LOGO IMAGE -->
+                    <img src="https://github.com/dronelanka/dronelanka.github.io/blob/main/src/drone%20photography%20sri%20lanka%20vanowarna%20aerials.png?raw=true" alt="Vanowarna Aerials Logo" class="h-20 w-full">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#portfolio" class="hover:text-sky-600 transition-colors">Portfolio</a>
+                    <a href="#services" class="hover:text-sky-600 transition-colors">Services</a>
+                    <a href="#pricing" class="hover:text-sky-600 transition-colors">Pricing</a>
+                    <a href="#contact" class="bg-sky-600 text-white px-5 py-2 rounded-full hover:bg-sky-700 transition-all shadow">Request a Quote</a>
+                </div>
+                <div class="md:hidden">
+                    <a href="#contact" class="bg-sky-600 text-white px-4 py-2 text-sm rounded-full hover:bg-sky-700 transition-all shadow">Quote</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 pt-32">
+
+        <!-- Hero Section -->
+        <section id="home" class="text-center min-h-[60vh] flex flex-col items-center justify-center">
+            <div class="max-w-4xl">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-800 mb-4 leading-tight reveal">
+                    <!-- UPDATED TITLE -->
+                    Your Drone Photography Partner in Sri Lanka
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 mb-8 reveal" style="transition-delay: 200ms;">
+                    Over 9+ years of experience in stunning Aerial Photography, Videography, and Precision Mapping.
+                </p>
+                <a href="#portfolio" class="bg-slate-800 text-white px-8 py-4 rounded-full hover:bg-slate-900 transition-all shadow-lg text-lg font-semibold reveal" style="transition-delay: 400ms;">
+                    View Our Work
+                </a>
+            </div>
+        </section>
+
+        <!-- About Us Section (Reduced Spacing) -->
+        <section id="about" class="py-16 md:py-24">
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <img src="https://placehold.co/600x400/e2e8f0/4a5568?text=Drone+in+Action" alt="A drone flying over a scenic Sri Lankan landscape" class="rounded-2xl shadow-xl w-full">
+                </div>
+                <div class="reveal" style="transition-delay: 200ms;">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">About Vanowarna Aerials</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Vanowarna Aerials is a premium aerial cinematography company based in Sri Lanka, delivering breathtaking drone footage and photography for films, documentaries, architecture, tourism, and events. Founded in 2016, we bring creative vision and technical precision together to elevate storytelling from the sky.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ====================================================================== -->
+        <!-- HOW TO UPDATE PORTFOLIO GUIDE -->
+        <!--
+            To update your portfolio, follow these steps:
+            1. Find the `portfolioItems` array in the <script> tag at the bottom of this file.
+            2. Each item in the array is an object with `imageSrc`, `title`, and `description`.
+            3. To add a new item: Copy an existing object, paste it at the end of the list (before the closing `];`), and change the values.
+                - `imageSrc`: Replace the 'https://placehold.co/...' URL with the link to your new image. Host your images on a service like Imgur, or within your GitHub repository.
+                - `title`: Update the project title.
+                - `description`: Update the project description.
+            4. To remove an item: Delete the entire object from the `portfolioItems` array.
+            5. The website will automatically update the carousel with your changes.
+        -->
+        <!-- ====================================================================== -->
+
+        <!-- Portfolio Section (Reduced Spacing & Larger) -->
+        <section id="portfolio" class="py-16 md:py-24 text-center">
+            <h2 class="text-3xl font-bold text-slate-800 mb-4 reveal">Featured Work</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto mb-12 reveal" style="transition-delay: 200ms;">
+                A glimpse into the stunning perspectives we've captured across Sri Lanka. Click on any image to see a larger view.
+            </p>
+
+            <div class="max-w-7xl mx-auto reveal" style="transition-delay: 400ms;">
+                <div id="carousel-container" class="carousel-container relative">
+                    <div id="carousel-track" class="carousel-track">
+                        <!-- Portfolio items will be dynamically inserted here by JavaScript -->
+                    </div>
+                    <button id="prevBtn" class="absolute top-1/2 left-0 -translate-y-1/2 bg-white/70 backdrop-blur-sm p-2 rounded-full shadow-md hover:bg-white transition-all ml-4 hidden lg:block z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <button id="nextBtn" class="absolute top-1/2 right-0 -translate-y-1/2 bg-white/70 backdrop-blur-sm p-2 rounded-full shadow-md hover:bg-white transition-all mr-4 hidden lg:block z-10">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Services Section (Reduced Spacing) -->
+        <section id="services" class="py-16 md:py-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4 reveal">Comprehensive Aerial & Ground Services</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto reveal" style="transition-delay: 200ms;">Beyond the sky, we offer a full suite of production services to bring your project to life.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Tiles -->
+                <div class="glass-panel p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 reveal"><h3 class="font-bold text-xl mb-3 text-slate-800">Video Editing</h3><p class="text-slate-600">Professional color grading, cinematic cuts, and audio syncing to create a polished final product.</p></div>
+                <div class="glass-panel p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 reveal" style="transition-delay: 100ms;"><h3 class="font-bold text-xl mb-3 text-slate-800">Post-Production</h3><p class="text-slate-600">VFX integration, motion graphics, and advanced stabilization to enhance your footage.</p></div>
+                <div class="glass-panel p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 reveal" style="transition-delay: 200ms;"><h3 class="font-bold text-xl mb-3 text-slate-800">Ground-Based Photography</h3><p class="text-slate-600">High-resolution DSLR/handheld photography for comprehensive combined packages.</p></div>
+                <div class="glass-panel p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 reveal" style="transition-delay: 300ms;"><h3 class="font-bold text-xl mb-3 text-slate-800">Surveys & Mapping</h3><p class="text-slate-600">Highly accurate 2D/3D orthophoto mapping and topographic surveys for land analysis.</p></div>
+                <div class="glass-panel p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 reveal" style="transition-delay: 400ms;"><h3 class="font-bold text-xl mb-3 text-slate-800">Site Inspections</h3><p class="text-slate-600">Drone-based visual inspections for infrastructure, agriculture, and construction.</p></div>
+                 <div class="glass-panel p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 reveal" style="transition-delay: 500ms;"><h3 class="font-bold text-xl mb-3 text-slate-800">Tourism Promotion</h3><p class="text-slate-600">Creating captivating aerial content to showcase Sri Lanka's beautiful destinations and hotels.</p></div>
+            </div>
+        </section>
+
+        <!-- Pricing Section (Reduced Spacing) -->
+        <section id="pricing" class="py-16 md:py-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4 reveal">Flexible Pricing Options</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto reveal" style="transition-delay: 200ms;">Transparent pricing to fit the scope of your project. Contact us for a tailored quote.</p>
+            </div>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
+                <!-- Pricing Tile 1 -->
+                <div class="glass-panel p-8 shadow-lg flex flex-col reveal" style="transition-delay: 300ms;"><h3 class="font-bold text-2xl mb-2 text-slate-800">Standard Package</h3><p class="text-4xl font-bold text-sky-600 mb-4">LKR 30,000<span class="text-lg font-normal text-slate-500"> / session</span></p><ul class="text-slate-600 space-y-3 mb-6 flex-grow"><li class="flex items-start"><span class="text-sky-500 mr-2 mt-1">✓</span> Session length of ~3 hours.</li><li class="flex items-start"><span class="text-sky-500 mr-2 mt-1">✓</span> Editing: LKR 5,000 per 10 images.</li><li class="flex items-start"><span class="text-sky-500 mr-2 mt-1">✓</span> Editing: LKR 8,000 per 5 min video.</li><li class="flex items-start"><span class="text-sky-500 mr-2 mt-1">✓</span> Free travel within Colombo, Kandy, Kurunegala city limits.</li></ul><p class="text-xs text-slate-500 mt-auto">Prices exclude CAASL permissions. Travel outside free zones is LKR 120/km.</p></div>
+                <!-- Pricing Tile 2 -->
+                <div class="glass-panel p-8 shadow-lg flex flex-col reveal" style="transition-delay: 400ms;"><h3 class="font-bold text-2xl mb-2 text-slate-800">Custom Projects</h3><p class="text-4xl font-bold text-sky-600 mb-4">Let's Talk</p><ul class="text-slate-600 space-y-3 mb-6 flex-grow"><li class="flex items-start"><span class="text-sky-500 mr-2 mt-1">✓</span> Available for commercial & film.</li><li class="flex items-start"><span class="text-sky-500 mr-2 mt-1">✓</span> Tailored packages for unique needs.</li><li class="flex items-start"><span class="text-sky-500 mr-2 mt-1">✓</span> Multi-day shoots and long-term projects.</li><li class="flex items-start"><span class="text-sky-500 mr-2 mt-1">✓</span> Get a detailed quote based on your specific requirements.</li></ul><a href="#contact" class="bg-sky-600 text-white text-center w-full py-3 rounded-lg hover:bg-sky-700 transition-all font-semibold mt-auto">Request a Custom Quote</a></div>
+            </div>
+        </section>
+
+        <!-- ====================================================================== -->
+        <!-- HOW TO UPDATE CONTACT & SOCIALS GUIDE -->
+        <!--
+            To update your contact information:
+            1. Find the section below with the `id="contact"`.
+            2. Locate the `<a>` tags for Email, Phone, WhatsApp, etc.
+            3. Email: Change `mailto:vanowarna.aerials@gmail.com` and the display text.
+            4. Phone: Change `tel:+94720151315` and the display text.
+            5. WhatsApp: Change the number in `https://wa.me/94720151315`.
+            6. Instagram/Facebook: Change the URL in the `href="..."` attribute.
+            7. Save the file, and your contact details will be updated.
+        -->
+        <!-- ====================================================================== -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 text-center">
+             <div class="max-w-3xl mx-auto glass-panel p-8 md:p-12 shadow-xl reveal">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">Ready to Elevate Your Project?</h2>
+                <p class="text-slate-600 mb-8">
+                    Contact us today to discuss your vision. We're excited to hear about your project and how we can help you capture it from a stunning new perspective.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+                    <a href="mailto:vanowarna.aerials@gmail.com" class="bg-white/80 hover:bg-white transition-all shadow-sm border border-slate-200 text-slate-700 px-6 py-3 rounded-full font-semibold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Email</a>
+                    <a href="https://wa.me/94720151315" target="_blank" class="bg-white/80 hover:bg-white transition-all shadow-sm border border-slate-200 text-slate-700 px-6 py-3 rounded-full font-semibold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.1 12.3-4.3-1.6-1.6 4.3a10 10 0 1 1 5.9-5.9z"></path></svg> WhatsApp</a>
+                    <a href="tel:+94720151315" class="bg-white/80 hover:bg-white transition-all shadow-sm border border-slate-200 text-slate-700 px-6 py-3 rounded-full font-semibold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.3 2.7a10 10 0 1 1-14.6 14.6L2 22l5.3-1.7a10 10 0 0 1 10-10z"></path></svg> +94 720151315</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-300 mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                 <a href="https://www.instagram.com/vanowarna.aerials/" target="_blank" class="hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                 <a href="https://www.facebook.com/vanowarna.aerials" target="_blank" class="hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            </div>
+            <p>&copy; <span id="year"></span> Vanowarna Aerials. All Rights Reserved.</p>
+            <p class="text-sm text-slate-400 mt-2">Specializing in Drone Photography and Cinematography across Sri Lanka.</p>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolioModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // --- HOW TO EDIT PORTFOLIO ITEMS ---
+        const portfolioItems = [
+            { imageSrc: 'https://placehold.co/600x450/a7c5e8/333?text=Project+1', title: 'Coastal Hotel Promotion', description: 'Aerial video and photos for a luxury hotel in Galle.'},
+            { imageSrc: 'https://placehold.co/600x450/b7e4c7/333?text=Project+2', title: 'Tea Estate Survey', description: 'Topographic mapping for an estate in Nuwara Eliya.'},
+            { imageSrc: 'https://placehold.co/600x450/f0c4a8/333?text=Project+3', title: 'Documentary Film Scene', description: 'Cinematic FPV shots for a nature documentary.'},
+            { imageSrc: 'https://placehold.co/600x450/e8b2d8/333?text=Project+4', title: 'Architectural Visualization', description: 'Drone photography for a new high-rise in Colombo.'},
+            { imageSrc: 'https://placehold.co/600x450/d8d8d8/333?text=Project+5', title: 'Event Coverage', description: 'Dynamic coverage of an outdoor music festival.'},
+            { imageSrc: 'https://placehold.co/600x450/c1e1d2/333?text=Project+6', title: 'Real Estate Showcase', description: 'Highlighting a property with sweeping aerial views.'},
+            { imageSrc: 'https://placehold.co/600x450/f9dcc4/333?text=Project+7', title: 'Sigiriya Rock Flyover', description: 'Capturing the majestic Sigiriya from a unique perspective.'},
+            { imageSrc: 'https://placehold.co/600x450/a3d5e8/333?text=Project+8', title: 'Construction Progress', description: 'Weekly progress monitoring for a large construction site.'}
+        ];
+
+        const carouselTrack = document.getElementById('carousel-track');
+        // Duplicate items for seamless loop
+        const allItems = [...portfolioItems, ...portfolioItems];
+        
+        allItems.forEach(item => {
+            const itemHtml = `
+                <div class="carousel-item p-4">
+                    <div class="group relative block w-full overflow-hidden rounded-xl shadow-lg cursor-pointer">
+                        <img src="${item.imageSrc}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <h3 class="font-bold text-xl">${item.title}</h3>
+                            <p class="text-sm opacity-90">${item.description}</p>
+                        </div>
+                    </div>
+                </div>`;
+            carouselTrack.innerHTML += itemHtml;
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const gradientBg = document.querySelector('.gradient-bg');
+        document.addEventListener('mousemove', (e) => {
+            requestAnimationFrame(() => {
+                const { clientX: x, clientY: y } = e;
+                const { innerWidth: width, innerHeight: height } = window;
+                gradientBg.style.setProperty('--x', `${(x / width) * 100}%`);
+                gradientBg.style.setProperty('--y', `${(y / height) * 100}%`);
+            });
+        });
+
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+
+        // --- UPDATED CAROUSEL LOGIC WITH AUTOSCROLL ---
+        const carouselContainer = document.getElementById('carousel-container');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentIndex = 0;
+        let autoScrollInterval;
+
+        function getItemsPerPage() {
+            if (window.innerWidth >= 1280) return 3;
+            if (window.innerWidth >= 1024) return 2.5; // for a peek effect
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+        }
+
+        function updateCarousel(transition = true) {
+            const itemsPerPage = getItemsPerPage();
+            const trackWidth = 100 / itemsPerPage;
+            
+            if (!transition) carouselTrack.style.transition = 'none';
+            
+            carouselTrack.style.transform = `translateX(-${currentIndex * trackWidth}%)`;
+
+            if (!transition) {
+                // Force a reflow, so the transition is re-enabled for next moves
+                carouselTrack.offsetHeight; 
+                carouselTrack.style.transition = 'transform 0.5s ease-in-out';
+            }
+        }
+        
+        function advanceCarousel(direction) {
+             currentIndex += direction;
+             
+             // If we reach the cloned section, silently jump back to the start
+             if (currentIndex >= portfolioItems.length) {
+                 // Wait for the transition to end, then jump
+                 setTimeout(() => {
+                    currentIndex = 0;
+                    updateCarousel(false);
+                 }, 500);
+             } else {
+                updateCarousel();
+             }
+        }
+        
+        function startAutoScroll() {
+            stopAutoScroll(); // Prevent multiple intervals
+            autoScrollInterval = setInterval(() => {
+                advanceCarousel(1);
+            }, 3000); // Change slide every 3 seconds
+        }
+
+        function stopAutoScroll() {
+            clearInterval(autoScrollInterval);
+        }
+
+        nextBtn.addEventListener('click', () => advanceCarousel(1));
+        prevBtn.addEventListener('click', () => {
+             // Manual prev is a bit trickier with looping, keeping it simple for now
+             if(currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+             }
+        });
+
+        carouselContainer.addEventListener('mouseenter', stopAutoScroll);
+        carouselContainer.addEventListener('mouseleave', startAutoScroll);
+
+        window.addEventListener('resize', () => {
+             currentIndex = 0;
+             updateCarousel(false);
+        });
+        
+        updateCarousel();
+        startAutoScroll(); // Start the auto-scroll
+
+        const modal = document.getElementById('portfolioModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.querySelector('.close');
+
+        document.querySelectorAll('.carousel-item .group').forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.querySelector('img').src;
+                modal.style.display = 'block';
+                modalImg.src = imgSrc.replace(/600x450/, '1200x900');
+            });
+        });
+
+        closeBtn.onclick = () => modal.style.display = "none";
+        window.onclick = (event) => {
+            if (event.target == modal) modal.style.display = "none";
+        }
+        
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => observer.observe(el));
+    });
+    </script>
+
+</body>
+</html>
