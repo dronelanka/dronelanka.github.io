@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title and Meta Description will be set by JavaScript -->
+    <title>Blog Post - Vanowarna Aerials</title>
+    <meta name="description" content="">
+    
+    <!-- Use the same styles and fonts -->
+    <link rel="icon" href="https://github.com/dronelanka/dronelanka.github.io/blob/main/src/drone%20photography%20sri%20lanka.png?raw=true" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f0f2f5; }
+        .gradient-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(circle at var(--x) var(--y), #d1e5f0 0%, #f7fafc 50%, #e2e8f0 100%); transition: background 0.1s ease-out; }
+        .glass-panel { background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(16px) saturate(180%); -webkit-backdrop-filter: blur(16px) saturate(180%); border: 1px solid rgba(209, 213, 219, 0.3); border-radius: 1rem; }
+        /* Styles for blog content */
+        .post-content h2 { font-size: 1.875rem; font-weight: 700; color: #1e293b; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .post-content h3 { font-size: 1.5rem; font-weight: 600; color: #334155; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .post-content p { line-height: 1.75; margin-bottom: 1.25rem; color: #475569; }
+        .post-content a { color: #0284c7; text-decoration: underline; }
+        .post-content ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.25rem; color: #475569; }
+        .post-content li { margin-bottom: 0.5rem; }
+        .post-content blockquote { border-left: 4px solid #38bdf8; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #64748b; }
+    </style>
+</head>
+<body class="text-slate-700 antialiased">
+
+    <div class="gradient-bg"></div>
+
+    <!-- Header (Same as blog.html) -->
+    <header id="header" class="sticky top-0 left-0 w-full z-50 transition-all duration-300 py-2">
+        <nav class="container mx-auto px-6">
+            <div class="flex items-center justify-between glass-panel px-6 py-2 shadow-sm">
+                <a href="index.html" class="text-2xl font-bold text-slate-800"><img src="https://github.com/dronelanka/dronelanka.github.io/blob/main/src/drone%20photography%20sri%20lanka%20vanowarna%20aerials.png?raw=true" alt="Vanowarna Aerials Logo" class="h-10 md:h-12 w-auto"></a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#portfolio" class="hover:text-sky-600 transition-colors">Portfolio</a>
+                    <a href="index.html#services" class="hover:text-sky-600 transition-colors">Services</a>
+                    <a href="blog.html" class="text-sky-600 font-semibold transition-colors">Blog</a>
+                    <a href="index.html#pricing" class="hover:text-sky-600 transition-colors">Pricing</a>
+                    <a href="index.html#contact" class="bg-sky-600 text-white px-5 py-2 rounded-full hover:bg-sky-700 transition-all shadow">Request a Quote</a>
+                </div>
+                 <div class="md:hidden">
+                     <a href="index.html#contact" class="bg-sky-600 text-white px-4 py-2 text-sm rounded-full hover:bg-sky-700 transition-all shadow">Quote</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 pt-12 pb-24">
+        <div id="post-container" class="max-w-3xl mx-auto glass-panel p-6 md:p-10 lg:p-12 shadow-xl">
+            <!-- Loading state -->
+            <div id="loading-state" class="text-center py-20">
+                <p class="text-slate-500">Loading post...</p>
+            </div>
+            
+            <!-- Post content will be injected here -->
+        </div>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-slate-800 text-slate-300">
+        <div class="container mx-auto px-6 py-8 text-center">
+             <div class="flex justify-center space-x-6 mb-6">
+                 <a href="https://www.instagram.com/vanowarna.aerials/" target="_blank" class="hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                 <a href="https://www.facebook.com/vanowarna.aerials" target="_blank" class="hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            </div>
+            <p>© <span id="year"></span> Vanowarna Aerials. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+        const postContainer = document.getElementById('post-container');
+        const loadingState = document.getElementById('loading-state');
+        
+        try {
+            // Get the post 'slug' from the URL (e.g., blog-post.html?post=my-first-post)
+            const urlParams = new URLSearchParams(window.location.search);
+            const postSlug = urlParams.get('post');
+
+            if (!postSlug) {
+                throw new Error("No post specified in URL.");
+            }
+
+            // Fetch the entire list of posts to find the metadata for our current post
+            const postsResponse = await fetch('./posts/posts.json');
+            if (!postsResponse.ok) throw new Error("Could not load post data.");
+            const allPosts = await postsResponse.json();
+
+            // Find the specific post object that matches the slug
+            const postData = allPosts.find(p => p.slug === postSlug);
+
+            if (!postData) {
+                throw new Error("Post not found.");
+            }
+
+            // Fetch the actual HTML content for the post
+            const contentResponse = await fetch(`./posts/post-content/${postData.slug}.html`);
+            if (!contentResponse.ok) throw new Error("Could not load post content.");
+            const postContentHtml = await contentResponse.text();
+
+            // --- Populate the page ---
+            
+            // 1. Set the page title and meta description for SEO
+            document.title = `${postData.title} - Vanowarna Aerials`;
+            document.querySelector('meta[name="description"]').setAttribute("content", postData.summary);
+
+            // 2. Build the full post HTML
+            const fullPostHtml = `
+                <img src="${postData.thumbnailUrl}" alt="${postData.title}" class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-2">${postData.title}</h1>
+                <p class="text-slate-500 mb-8">${postData.date} • by ${postData.author}</p>
+                <div class="post-content">
+                    ${postContentHtml}
+                </div>
+                <div class="mt-12 pt-6 border-t border-slate-200">
+                    <a href="blog.html" class="text-sky-600 hover:text-sky-700 font-semibold">← Back to all posts</a>
+                </div>
+            `;
+            
+            // 3. Inject the HTML into the page and remove the loading message
+            postContainer.innerHTML = fullPostHtml;
+
+        } catch (error) {
+            console.error("Error loading post:", error);
+            postContainer.innerHTML = `<div class="text-center py-20"><p class="text-red-500">Error: ${error.message}</p><a href="blog.html" class="text-sky-600 mt-4 inline-block">Go back to blog</a></div>`;
+        }
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    });
+    </script>
+</body>
+</html>
