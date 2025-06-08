@@ -23,13 +23,16 @@
     <!-- Interactive Gradient Background -->
     <div class="gradient-bg"></div>
 
-    <!-- Header (Same as index.html but with links adjusted) -->
+    <!-- Corrected Header -->
     <header id="header" class="sticky top-0 left-0 w-full z-50 transition-all duration-300 py-2">
         <nav class="container mx-auto px-6">
             <div class="flex items-center justify-between glass-panel px-6 py-2 shadow-sm">
+                <!-- Logo -->
                 <a href="index.html" class="text-2xl font-bold text-slate-800">
                     <img src="https://github.com/dronelanka/dronelanka.github.io/blob/main/src/drone%20photography%20sri%20lanka%20vanowarna%20aerials.png?raw=true" alt="Vanowarna Aerials Logo" class="h-10 md:h-12 w-auto">
                 </a>
+    
+                <!-- Desktop Navigation (Visible on medium screens and up) -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html#portfolio" class="hover:text-sky-600 transition-colors">Portfolio</a>
                     <a href="index.html#services" class="hover:text-sky-600 transition-colors">Services</a>
@@ -37,7 +40,10 @@
                     <a href="index.html#pricing" class="hover:text-sky-600 transition-colors">Pricing</a>
                     <a href="index.html#contact" class="bg-sky-600 text-white px-5 py-2 rounded-full hover:bg-sky-700 transition-all shadow">Request a Quote</a>
                 </div>
-                <div class="md:hidden">
+    
+                <!-- Mobile Navigation (Visible on small screens) -->
+                <div class="md:hidden flex items-center space-x-4">
+                     <a href="blog.html" class="text-sky-600 font-semibold text-sm transition-colors hover:text-sky-700">Blog</a>
                      <a href="index.html#contact" class="bg-sky-600 text-white px-4 py-2 text-sm rounded-full hover:bg-sky-700 transition-all shadow">Quote</a>
                 </div>
             </div>
