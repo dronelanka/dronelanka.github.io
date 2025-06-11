@@ -66,34 +66,6 @@
             border-radius: 1rem; /* 16px */
         }
 
-        /* Carousel Styles */
-        .carousel-container {
-            overflow-x: hidden;
-        }
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        /* Increased size of carousel items */
-        .carousel-item {
-            flex: 0 0 100%;
-        }
-        @media (min-width: 768px) {
-            .carousel-item {
-                flex: 0 0 50%;
-            }
-        }
-        @media (min-width: 1024px) {
-            .carousel-item {
-                flex: 0 0 40%; /* Made items larger */
-            }
-        }
-         @media (min-width: 1280px) {
-            .carousel-item {
-                flex: 0 0 33.333%;
-            }
-        }
-        
         /* Modal Lightbox for Portfolio */
         .modal {
             display: none; /* Hidden by default */
@@ -159,7 +131,7 @@
     <nav class="container mx-auto px-6">
         <div class="flex items-center justify-between glass-panel px-6 py-2 shadow-sm">
             <!-- Logo -->
-            <a href="index.html" class="text-2xl font-bold text-slate-800">
+            <a href="#" class="text-2xl font-bold text-slate-800">
                 <img src="https://github.com/dronelanka/dronelanka.github.io/blob/main/src/drone%20photography%20sri%20lanka%20vanowarna%20aerials.png?raw=true" alt="Vanowarna Aerials Logo" class="h-10 md:h-12 w-auto">
             </a>
 
@@ -187,7 +159,6 @@
         <section id="home" class="text-center min-h-[60vh] flex flex-col items-center justify-center">
             <div class="max-w-4xl">
                 <h1 class="text-4xl md:text-6xl font-extrabold text-slate-800 mb-4 leading-tight reveal">
-                    <!-- UPDATED TITLE -->
                     Your Drone Photography Partner in Sri Lanka
                 </h1>
                 <p class="text-lg md:text-xl text-slate-600 mb-8 reveal" style="transition-delay: 200ms;">
@@ -221,33 +192,24 @@
             1. Find the `portfolioItems` array in the <script> tag at the bottom of this file.
             2. Each item in the array is an object with `imageSrc`, `title`, and `description`.
             3. To add a new item: Copy an existing object, paste it at the end of the list (before the closing `];`), and change the values.
-                - `imageSrc`: Replace the 'https://placehold.co/...' URL with the link to your new image. Host your images on a service like Imgur, or within your GitHub repository.
+                - `imageSrc`: Replace the URL with the link to your new image.
                 - `title`: Update the project title.
                 - `description`: Update the project description.
             4. To remove an item: Delete the entire object from the `portfolioItems` array.
-            5. The website will automatically update the carousel with your changes.
+            5. The website will automatically update the gallery with your changes.
         -->
         <!-- ====================================================================== -->
 
-        <!-- Portfolio Section (Reduced Spacing & Larger) -->
+        <!-- Portfolio Section -->
         <section id="portfolio" class="py-16 md:py-24 text-center">
-            <h2 class="text-3xl font-bold text-slate-800 mb-4 reveal">Featured Work</h2>
+            <h2 class="text-3xl font-bold text-slate-800 mb-4 reveal">Image Gallery</h2>
             <p class="text-slate-600 max-w-2xl mx-auto mb-12 reveal" style="transition-delay: 200ms;">
-                A glimpse into the stunning perspectives we've captured across Sri Lanka. Click on any image to see a larger view.
+                A glimpse into the stunning perspectives we've captured across Sri Lanka.
             </p>
 
-            <div class="max-w-7xl mx-auto reveal" style="transition-delay: 400ms;">
-                <div id="carousel-container" class="carousel-container relative">
-                    <div id="carousel-track" class="carousel-track">
-                        <!-- Portfolio items will be dynamically inserted here by JavaScript -->
-                    </div>
-                    <button id="prevBtn" class="absolute top-1/2 left-0 -translate-y-1/2 bg-white/70 backdrop-blur-sm p-2 rounded-full shadow-md hover:bg-white transition-all ml-4 hidden lg:block z-10">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                    </button>
-                    <button id="nextBtn" class="absolute top-1/2 right-0 -translate-y-1/2 bg-white/70 backdrop-blur-sm p-2 rounded-full shadow-md hover:bg-white transition-all mr-4 hidden lg:block z-10">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-                    </button>
-                </div>
+            <!-- This div will be populated by JavaScript -->
+            <div id="image-gallery-grid" class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal" style="transition-delay: 400ms;">
+                <!-- Gallery items will be dynamically inserted here by JavaScript -->
             </div>
         </section>
 
@@ -320,14 +282,14 @@
                  <a href="https://www.instagram.com/vanowarna.aerials/" target="_blank" class="hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
                  <a href="https://www.facebook.com/vanowarna.aerials" target="_blank" class="hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
             </div>
-            <p>&copy; <span id="year"></span> Vanowarna Aerials. All Rights Reserved.</p>
+            <p>© <span id="year"></span> Vanowarna Aerials. All Rights Reserved.</p>
             <p class="text-sm text-slate-400 mt-2">Specializing in Drone Photography and Cinematography across Sri Lanka.</p>
         </div>
     </footer>
 
     <!-- Portfolio Modal -->
     <div id="portfolioModal" class="modal">
-        <span class="close">&times;</span>
+        <span class="close">×</span>
         <img class="modal-content" id="modalImage">
     </div>
 
@@ -343,7 +305,6 @@
             { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/5%20drone%20lanka%20vanowarna%20water%20sports.jpg?raw=true', title: 'Water Sports', description: 'Jet ski and water sports photography in Pasikudah.'},
             { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/6%20drone%20lanka%20vanowarna%20almaden%20towers.jpg?raw=true', title: 'Real Estate Showcase', description: 'Highlighting a property with sweeping aerial views in Rajagiriya.'},
             { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/7%20drone%20lanka%20vanowarna%20air%20sports.jpg?raw=true', title: 'Hot air Balloons', description: 'Hot air ballooning in Dambulla, Sri Lanka.'},
-            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/8%20drone%20lanka%20vanowarna%20water%20fall.jpg?raw=true', title: 'Lifestyle Shoot', description: 'Life style photoshoot for Amaya Hunnas hotel.'},
             { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/9%20drone%20lanka%20vanowarna%20amaya%20hills.jpg?raw=true', title: 'Architectural Shoot', description: 'Aerials photography done for Amaya Hills Hotel, Kandy.'},
             { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/10%20drone%20lanka%20vanowarna%20construction%20site.jpg?raw=true', title: 'Construction Site', description: 'Maduru Oya construction site aerials.'},
             { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/11%20drone%20lanka%20vanowarna%20manigala.jpg?raw=true', title: 'Documentary Movie', description: 'Aerial videos for a documentary film.'},
@@ -354,27 +315,26 @@
             { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/17%20drone%20lanka%20vanowarna%20hotel%20epitome.jpg?raw=true', title: 'Hotel Photography', description: 'Aerials photographes for a luxury hotel in Kurunegala.'}
         ];
 
-        const carouselTrack = document.getElementById('carousel-track');
-        // Duplicate items for seamless loop
-        const allItems = [...portfolioItems, ...portfolioItems];
+        const galleryGrid = document.getElementById('image-gallery-grid');
         
-        allItems.forEach(item => {
+        // --- Populating the new Image Gallery Grid ---
+        portfolioItems.forEach(item => {
+            const altText = `Vanowarna Aerials: ${item.title} - ${item.description}`;
             const itemHtml = `
-                <div class="carousel-item p-4">
-                    <div class="group relative block w-full overflow-hidden rounded-xl shadow-lg cursor-pointer">
-                        <img src="${item.imageSrc}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 p-6 text-white">
-                            <h3 class="font-bold text-xl">${item.title}</h3>
-                            <p class="text-sm opacity-90">${item.description}</p>
-                        </div>
+                <div class="gallery-item group relative block w-full h-80 overflow-hidden rounded-xl shadow-lg cursor-pointer">
+                    <img src="${item.imageSrc}" alt="${altText}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h3 class="font-bold text-xl">${item.title}</h3>
+                        <p class="text-sm opacity-90">${item.description}</p>
                     </div>
                 </div>`;
-            carouselTrack.innerHTML += itemHtml;
+            galleryGrid.innerHTML += itemHtml;
         });
 
         document.getElementById('year').textContent = new Date().getFullYear();
 
+        // --- Interactive Background ---
         const gradientBg = document.querySelector('.gradient-bg');
         document.addEventListener('mousemove', (e) => {
             requestAnimationFrame(() => {
@@ -385,6 +345,7 @@
             });
         });
 
+        // --- Header Shrink on Scroll ---
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -396,90 +357,16 @@
             }
         });
 
-        // --- UPDATED CAROUSEL LOGIC WITH AUTOSCROLL ---
-        const carouselContainer = document.getElementById('carousel-container');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        let currentIndex = 0;
-        let autoScrollInterval;
-
-        function getItemsPerPage() {
-            if (window.innerWidth >= 1280) return 3;
-            if (window.innerWidth >= 1024) return 2.5; // for a peek effect
-            if (window.innerWidth >= 768) return 2;
-            return 1;
-        }
-
-        function updateCarousel(transition = true) {
-            const itemsPerPage = getItemsPerPage();
-            const trackWidth = 100 / itemsPerPage;
-            
-            if (!transition) carouselTrack.style.transition = 'none';
-            
-            carouselTrack.style.transform = `translateX(-${currentIndex * trackWidth}%)`;
-
-            if (!transition) {
-                // Force a reflow, so the transition is re-enabled for next moves
-                carouselTrack.offsetHeight; 
-                carouselTrack.style.transition = 'transform 0.5s ease-in-out';
-            }
-        }
-        
-        function advanceCarousel(direction) {
-             currentIndex += direction;
-             
-             // If we reach the cloned section, silently jump back to the start
-             if (currentIndex >= portfolioItems.length) {
-                 // Wait for the transition to end, then jump
-                 setTimeout(() => {
-                    currentIndex = 0;
-                    updateCarousel(false);
-                 }, 500);
-             } else {
-                updateCarousel();
-             }
-        }
-        
-        function startAutoScroll() {
-            stopAutoScroll(); // Prevent multiple intervals
-            autoScrollInterval = setInterval(() => {
-                advanceCarousel(1);
-            }, 3000); // Change slide every 3 seconds
-        }
-
-        function stopAutoScroll() {
-            clearInterval(autoScrollInterval);
-        }
-
-        nextBtn.addEventListener('click', () => advanceCarousel(1));
-        prevBtn.addEventListener('click', () => {
-             // Manual prev is a bit trickier with looping, keeping it simple for now
-             if(currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-             }
-        });
-
-        carouselContainer.addEventListener('mouseenter', stopAutoScroll);
-        carouselContainer.addEventListener('mouseleave', startAutoScroll);
-
-        window.addEventListener('resize', () => {
-             currentIndex = 0;
-             updateCarousel(false);
-        });
-        
-        updateCarousel();
-        startAutoScroll(); // Start the auto-scroll
-
+        // --- Portfolio Modal Logic ---
         const modal = document.getElementById('portfolioModal');
         const modalImg = document.getElementById('modalImage');
         const closeBtn = document.querySelector('.close');
 
-        document.querySelectorAll('.carousel-item .group').forEach(item => {
+        document.querySelectorAll('.gallery-item').forEach(item => {
             item.addEventListener('click', () => {
                 const imgSrc = item.querySelector('img').src;
                 modal.style.display = 'block';
-                modalImg.src = imgSrc.replace(/600x450/, '1200x900');
+                modalImg.src = imgSrc;
             });
         });
 
@@ -488,6 +375,7 @@
             if (event.target == modal) modal.style.display = "none";
         }
         
+        // --- Scroll Reveal Animation Logic ---
         const revealElements = document.querySelectorAll('.reveal');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
