@@ -336,14 +336,22 @@
         
         // --- HOW TO EDIT PORTFOLIO ITEMS ---
         const portfolioItems = [
-            { imageSrc: 'https://placehold.co/600x450/a7c5e8/333?text=Project+1', title: 'Coastal Hotel Promotion', description: 'Aerial video and photos for a luxury hotel in Galle.'},
-            { imageSrc: 'https://placehold.co/600x450/b7e4c7/333?text=Project+2', title: 'Tea Estate Survey', description: 'Topographic mapping for an estate in Nuwara Eliya.'},
-            { imageSrc: 'https://placehold.co/600x450/f0c4a8/333?text=Project+3', title: 'Documentary Film Scene', description: 'Cinematic FPV shots for a nature documentary.'},
-            { imageSrc: 'https://placehold.co/600x450/e8b2d8/333?text=Project+4', title: 'Architectural Visualization', description: 'Drone photography for a new high-rise in Colombo.'},
-            { imageSrc: 'https://placehold.co/600x450/d8d8d8/333?text=Project+5', title: 'Event Coverage', description: 'Dynamic coverage of an outdoor music festival.'},
-            { imageSrc: 'https://placehold.co/600x450/c1e1d2/333?text=Project+6', title: 'Real Estate Showcase', description: 'Highlighting a property with sweeping aerial views.'},
-            { imageSrc: 'https://placehold.co/600x450/f9dcc4/333?text=Project+7', title: 'Sigiriya Rock Flyover', description: 'Capturing the majestic Sigiriya from a unique perspective.'},
-            { imageSrc: 'https://placehold.co/600x450/a3d5e8/333?text=Project+8', title: 'Construction Progress', description: 'Weekly progress monitoring for a large construction site.'}
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/1%20drone%20lanka%20vanowarna%20aerials%20romance%20valley%20haputhale.jpg?raw=true', title: 'Romance Valley', description: 'Aerial video and photos for a luxury hotel in Haputhale.'},
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/2%20drone%20lanka%20vanowarna%20aerials%20property%20shoot.jpg?raw=true', title: 'Property Shoot', description: 'Private property shoot in Athurugiriya.'},
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/3%20drone%20lanka%20vanowarna%20aerials%20amaya%20beach.jpg?raw=true', title: 'Architectural Shoot', description: 'Aerials photography done for Amaya Beach Hotel.'},
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/4%20drone%20lanka%20vanowarna%20aerials%20amaya%20hunnas.jpg?raw=true', title: 'Architectural Shoot', description: 'Aerials photography done for Amaya Hunnas Hotel.'},
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/5%20drone%20lanka%20vanowarna%20water%20sports.jpg?raw=true', title: 'Water Sports', description: 'Jet ski and water sports photography in Pasikudah.'},
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/6%20drone%20lanka%20vanowarna%20almaden%20towers.jpg?raw=true', title: 'Real Estate Showcase', description: 'Highlighting a property with sweeping aerial views in Rajagiriya.'},
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/7%20drone%20lanka%20vanowarna%20air%20sports.jpg?raw=true', title: 'Hot air Balloons', description: 'Hot air ballooning in Dambulla, Sri Lanka.'},
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/8%20drone%20lanka%20vanowarna%20water%20fall.jpg?raw=true', title: 'Lifestyle Shoot', description: 'Life style photoshoot for Amaya Hunnas hotel.'},
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/9%20drone%20lanka%20vanowarna%20amaya%20hills.jpg?raw=true', title: 'Architectural Shoot', description: 'Aerials photography done for Amaya Hills Hotel, Kandy.'},
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/10%20drone%20lanka%20vanowarna%20construction%20site.jpg?raw=true', title: 'Construction Site', description: 'Maduru Oya construction site aerials.'},
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/11%20drone%20lanka%20vanowarna%20manigala.jpg?raw=true', title: 'Documentary Movie', description: 'Aerial videos for a documentary film.'},
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/12%20drone%20lanka%20vanowarna%20property.jpg?raw=true', title: 'Real Estate Showcase', description: 'Private property shoot for a housing company.'},
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/13%20drone%20lanka%20vanowarna%20cityscape.jpg?raw=true', title: 'Cityscape', description: 'Sunset aerials over Alawwa.'},
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/14%20drone%20lanka%20vanowarna%20university%20of%20peradeniya%20temple.jpg?raw=true', title: 'Aerial Art Photography', description: 'Aerial art photographes of Temple, University of Peradeniya.'},
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/15%20drone%20lanka%20vanowarna%20aerials%20land%20inspection%20knuckles.jpg?raw=true', title: 'Land Inspections', description: 'Aerial land inspections for real estate, in Knuckles, Sri Lanka.'},
+            { imageSrc: 'https://github.com/dronelanka/dronelanka.github.io/blob/main/src/carousel/17%20drone%20lanka%20vanowarna%20hotel%20epitome.jpg?raw=true', title: 'Hotel Photography', description: 'Aerials photographes for a luxury hotel in Kurunegala.'}
         ];
 
         const carouselTrack = document.getElementById('carousel-track');
