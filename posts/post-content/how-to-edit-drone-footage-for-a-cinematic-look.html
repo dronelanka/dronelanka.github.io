@@ -1,0 +1,53 @@
+<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
+
+<h1>How to Edit Drone Footage for a Cinematic Look</h1>
+<p>Transforming raw aerial clips into polished, cinematic sequences involves a combination of structured editing, stabilization, dynamic motion effects, and professional color work. The following guide outlines complete workflows for both <a href="https://www.blackmagicdesign.com/products/davinciresolve/" target="_blank">DaVinci Resolve</a> and <a href="https://www.adobe.com/products/premiere.html" target="_blank">Adobe Premiere Pro</a>.</p>
+
+<h2>A. DaVinci Resolve Workflow</h2>
+<ol>
+    <li><p>Project Setup and Media Management<br>Open Resolve’s Media page and import your drone clips. Generate optimized media or proxies for smooth playback when working with H.264/H.265 footage<sup><a href="#source-1">[1]</a></sup>. Organize clips into bins by location or shot type to streamline your timeline assembly.</p></li>
+    <li><p>Rough Cut and Timeline Assembly<br>Switch to the Edit page. Create a new timeline matching your source frame rate and resolution. Perform a rough cut by marking In/Out points and dragging key clips onto the timeline. Refine clip timing with Trim and Ripple tools, focusing on pacing rather than precision at this stage<sup><a href="#source-1">[1]</a></sup>.</p></li>
+    <li><p>Stabilization and Basic Effects<br>In the Edit page Inspector, apply Resolve’s Stabilizer to any shaky clips. Adjust Zoom and Smooth settings to maintain image quality. For dynamic reveals, experiment with built-in zoom keyframes or the Dolly Zoom effect by keyframing scale and position across the clip’s duration<sup><a href="#source-2">[2]</a></sup>.</p></li>
+    <li><p>Primary Color Correction<br>Navigate to the Color page. Use the first node for primary adjustments: balance exposure with Lift/Gamma/Gain wheels, set contrast in the HDR panels, and adjust white balance via the Temperature slider. Monitor scopes (Waveform, Parade) to ensure neutral blacks and whites<sup><a href="#source-3">[3]</a></sup>.</p></li>
+    <li><p>Creative Color Grading<br>Add a second node for a cinematic LUT or film-emulation preset, especially if you shot in a log profile like <a href="https://www.dji.com/newsroom/news/log-recording-modes" target="_blank">D-Log M</a>. Tweak the LUT’s strength using the Key Output slider. Subsequent nodes can host curvaceous S-curves for contrast boosts or Hue vs. Sat curves for selective color pops (e.g., enriching greens in landscapes)<sup><a href="#source-3">[3]</a></sup><sup><a href="#source-4">[4]</a></sup>.</p></li>
+    <li><p>Refinements and Effects<br>Use additional nodes to add vignettes, glow (Soft Clip in Resolve FX), or lens distortion correction. Layer power windows to isolate subjects—tracking them when necessary—to darken skies or brighten foregrounds. Apply a sharpening node last, keeping adjustments subtle to avoid artifacts.</p></li>
+    <li><p>Delivery and Export<br>In the Deliver page, select a codec that balances quality and file size—<a href="https://support.apple.com/en-us/HT200407" target="_blank">ProRes 422 HQ</a> for high-end delivery or H.264/H.265 for online platforms. Match timeline resolution and frame rate, then set keyframe interval to the default. Render with “Use optimized media” enabled for faster exports<sup><a href="#source-1">[1]</a></sup>.</p></li>
+</ol>
+
+<h2>B. Adobe Premiere Pro Workflow</h2>
+<ol>
+    <li><p>Import and Bin Organization<br>Copy your SD card contents into a dedicated folder. In Premiere’s Project panel, switch to Icon view for quick clip scouting. Create bins (e.g., “Aerial Establishing,” “Tracking Shots”) and drag clips accordingly<sup><a href="#source-5">[5]</a></sup>.</p></li>
+    <li><p>Rough Cut and Music Sync<br>Build a new sequence from your first clip to auto-match settings. Lay out the rough edit by trimming clips to the beat of your chosen soundtrack—enlarge the audio track to see beat peaks and align cuts precisely<sup><a href="#source-5">[5]</a></sup>.</p></li>
+    <li><p>Stabilization and Speed Ramping<br>Apply Warp Stabilizer from the Effects panel to smooth footage. For dramatic pacing, use Speed/Duration to create slow-motion reveals or ramp speed dynamically: right-click the clip, select Time Remapping → Speed, then keyframe acceleration and deceleration points. Enable Optical Flow for motion blur during ramps<sup><a href="#source-5">[5]</a></sup>.</p></li>
+    <li><p>Color Correction and Grading<br>Open the Lumetri Color panel. Under Basic Correction, set white balance, exposure, contrast, highlights, and shadows. In the Creative tab, apply a cinematic LUT and adjust its intensity. Use Curves for fine tonal control and HSL Secondary to isolate and boost target hues (e.g., emerald tea terraces)<sup><a href="#source-5">[5]</a></sup>.</p></li>
+    <li><p>Transitions and Effects<br>Introduce Cinematic bars (aspect ratio overlays) via an Adjustment Layer with Crop effects. Add gentle Cross Dissolves between shots for seamless flow. Employ the Transform effect on an Adjustment Layer to simulate subtle camera moves (push-ins or pans) when needed.</p></li>
+    <li><p>Export Settings<br>Choose File → Export → Media. Use H.264 with the “YouTube 4K” preset for online delivery or QuickTime with ProRes presets for professional masters. Ensure “Render at Maximum Depth” and “Use Maximum Render Quality” are checked to preserve color fidelity and avoid banding<sup><a href="#source-5">[5]</a></sup>.</p></li>
+</ol>
+
+<p>By following these structured workflows—leveraging Resolve’s node-based grading and Premiere’s Lumetri tools—drone footage can be elevated to a cinematic standard. Careful planning at each step, from organization and stabilization through nuanced color work and delivery, ensures that aerial stories captivate and impress.</p>
+
+<div style="text-align: center">⁂</div>
+
+<h3>Sources</h3>
+<ol>
+    <li id="source-1"><a href="https://www.youtube.com/watch?v=bU3vohtuXrQ" target="_blank">https://www.youtube.com/watch?v=bU3vohtuXrQ</a></li>
+    <li id="source-2"><a href="https://www.youtube.com/watch?v=RmO59iN5QlU" target="_blank">https://www.youtube.com/watch?v=RmO59iN5QlU</a></li>
+    <li id="source-3"><a href="https://www.youtube.com/watch?v=EiELNaYTc_4" target="_blank">https://www.youtube.com/watch?v=EiELNaYTc_4</a></li>
+    <li id="source-4"><a href="https://www.youtube.com/watch?v=SyuBCXobKQc" target="_blank">https://www.youtube.com/watch?v=SyuBCXobKQc</a></li>
+    <li id="source-5"><a href="https://www.redsharknews.com/a-beginners-guide-to-editing-your-drone-footage-using-adobe-premiere-pro" target="_blank">https://www.redsharknews.com/a-beginners-guide-to-editing-your-drone-footage-using-adobe-premiere-pro</a></li>
+    <li id="source-6"><a href="https://www.reddit.com/r/davinciresolve/comments/1bmul1b/how_do_you_edit_drone_footage/" target="_blank">https://www.reddit.com/r/davinciresolve/comments/1bmul1b/how_do_you_edit_drone_footage/</a></li>
+    <li id="source-7"><a href="https://www.youtube.com/watch?v=Lvl2vTE8Q84" target="_blank">https://www.youtube.com/watch?v=Lvl2vTE8Q84</a></li>
+    <li id="source-8"><a href="https://drone-luts.com" target="_blank">https://drone-luts.com</a></li>
+    <li id="source-9"><a href="https://matthewphilip.com/how-to-edit-drone-video-in-premiere-pro/" target="_blank">https://matthewphilip.com/how-to-edit-drone-video-in-premiere-pro/</a></li>
+    <li id="source-10"><a href="https://www.blackmagicdesign.com/products/davinciresolve/training" target="_blank">https://www.blackmagicdesign.com/products/davinciresolve/training</a></li>
+    <li id="source-11"><a href="https://forum.blackmagicdesign.com/viewtopic.php?f=21&t=159835" target="_blank">https://forum.blackmagicdesign.com/viewtopic.php?f=21&t=159835</a></li>
+    <li id="source-12"><a href="https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-18-Beginners-Guide.pdf" target="_blank">https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-18-Beginners-Guide.pdf</a></li>
+    <li id="source-13"><a href="https://www.youtube.com/watch?v=xZ1jwrrV6YU" target="_blank">https://www.youtube.com/watch?v=xZ1jwrrV6YU</a></li>
+    <li id="source-14"><a href="https://documents.blackmagicdesign.com/SupportNotes/DaVinci_Resolve_16_New_Features_Guide.pdf" target="_blank">https://documents.blackmagicdesign.com/SupportNotes/DaVinci_Resolve_16_New_Features_Guide.pdf</a></li>
+    <li id="source-15"><a href="https://www.finchley.co.uk/finchley-learning/from-drone-to-desktop-effects-for-video-editing-for-ultra-smooth-aerial-shots" target="_blank">https://www.finchley.co.uk/finchley-learning/from-drone-to-desktop-effects-for-video-editing-for-ultra-smooth-aerial-shots</a></li>
+    <li id="source-16"><a href="https://www.youtube.com/watch?v=ERBU9VFcMUc" target="_blank">https://www.youtube.com/watch?v=ERBU9VFcMUc</a></li>
+    <li id="source-17"><a href="https://www.youtube.com/watch?v=GREccQoNRBg" target="_blank">https://www.youtube.com/watch?v=GREccQoNRBg</a></li>
+    <li id="source-18"><a href="https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-19-Beginners-Guide.pdf?_v=1741161610000" target="_blank">https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-19-Beginners-Guide.pdf?_v=1741161610000</a></li>
+    <li id="source-19"><a href="https://www.blackmagicdesign.com/media/release/20230713-01" target="_blank">https://www.blackmagicdesign.com/media/release/20230713-01</a></li>
+    <li id="source-20"><a href="https://forum.blackmagicdesign.com/viewtopic.php?f=38&t=185007" target="_blank">https://forum.blackmagicdesign.com/viewtopic.php?f=38&t=185007</a></li>
+</ol>
